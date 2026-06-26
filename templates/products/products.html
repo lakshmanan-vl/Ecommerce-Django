@@ -1,0 +1,18 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+Products
+{% endblock %}
+
+{% block content %}
+<section class="d-flex justify-content-center align-items-center pt-4 crud">
+    {% if user.is_staff %}
+    <a href="{% url 'add_product' %}" class="btn">Add Product</a>
+    {% endif %}
+</section>
+<section>
+    <div>
+        {% include 'products/includes/productsSection.html' %}
+    </div>
+</section>
+{% endblock %}

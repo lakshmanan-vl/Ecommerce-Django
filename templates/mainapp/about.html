@@ -1,0 +1,736 @@
+<style>
+/* ================= HERO ================= */
+
+.about-hero{
+
+    background:#0b0b0b;
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:100px 0;
+
+}
+
+.hero-tag{
+
+    color:#D4AF37;
+
+    letter-spacing:3px;
+
+    font-weight:700;
+
+}
+
+.about-hero h1{
+
+    color:#fff;
+
+    font-size:72px;
+
+    font-weight:800;
+
+    margin:25px 0;
+
+    line-height:1.1;
+
+}
+
+.about-hero h1 span{
+
+    display:block;
+
+    color:#D4AF37;
+
+}
+
+.about-hero p{
+
+    color:#d5d5d5;
+
+    line-height:2;
+
+    font-size:18px;
+
+    margin-bottom:40px;
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+.btn-gold{
+
+    background:#D4AF37 !important;
+
+    color:#111 !important;
+
+    border:none !important;
+
+    color:#111;
+
+    border-radius:50px;
+
+    padding:15px 40px;
+
+    font-weight:700;
+
+    transition:.4s;
+
+}
+
+.btn-gold:hover{
+
+    background:#fff;
+
+    transform:translateY(-5px);
+
+}
+
+.hero-car{
+
+    width:100%;
+
+    border-radius:25px;
+
+    box-shadow:0 30px 60px rgba(0,0,0,.4);
+
+    transition:.5s;
+
+}
+
+.hero-car:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* ================= ABOUT ================= */
+
+.about-intro{
+
+    padding:100px 0;
+
+    background:#f8f9fa;
+
+}
+
+.about-image{
+
+    width:100%;
+
+    border-radius:25px;
+
+    box-shadow:0 25px 50px rgba(0,0,0,.15);
+
+}
+
+.section-tag{
+
+    color:#D4AF37;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+}
+
+.about-intro h2{
+
+    font-size:50px;
+
+    font-weight:800;
+
+    margin:20px 0;
+
+}
+
+.about-intro h2 span{
+
+    color:#D4AF37;
+
+}
+
+.about-intro p{
+
+    color:#666;
+
+    line-height:2;
+
+}
+
+.counter-box{
+
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:25px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.08);
+
+}
+
+.counter-box:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.counter-box h3{
+
+    color:#D4AF37;
+
+    font-size:38px;
+
+    font-weight:800;
+
+}
+
+.counter-box span{
+
+    color:#666;
+
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:991px){
+
+.about-hero{
+
+text-align:center;
+
+}
+
+.about-hero h1{
+
+font-size:46px;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.hero-car{
+
+margin-top:40px;
+
+}
+
+.about-intro h2{
+
+font-size:36px;
+
+}
+
+}
+/*=================================
+OUR STORY
+=================================*/
+
+.our-story{
+
+    padding:120px 0;
+
+    background:#111;
+
+}
+
+.story-image{
+
+    width:100%;
+
+    border-radius:30px;
+
+    box-shadow:0 30px 70px rgba(0,0,0,.45);
+
+    transition:.5s;
+
+}
+
+.story-image:hover{
+
+    transform:scale(1.05);
+
+}
+
+.section-title{
+
+    color:white;
+
+    font-size:52px;
+
+    font-weight:800;
+
+    margin:20px 0;
+
+}
+
+.section-title span{
+
+    color:#D4AF37;
+
+}
+
+.our-story p{
+
+    color:#d5d5d5;
+
+    line-height:2;
+
+    margin-bottom:25px;
+
+}
+
+
+/*=================================
+MISSION
+=================================*/
+
+.mission-vision{
+
+    padding:120px 0;
+
+    background:#f8f9fa;
+
+}
+
+.glass-card{
+
+    background:white;
+
+    border-radius:30px;
+
+    padding:50px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+
+    height:100%;
+
+}
+
+.glass-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 60px rgba(212,175,55,.2);
+
+}
+
+.icon-box{
+
+    width:90px;
+
+    height:90px;
+
+    background:#D4AF37;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin:auto;
+
+    font-size:40px;
+
+    margin-bottom:25px;
+
+}
+
+.glass-card h3{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    margin-bottom:20px;
+
+}
+
+.glass-card p{
+
+    color:#666;
+
+    line-height:1.9;
+
+}
+
+/*=================================
+Responsive
+=================================*/
+
+@media(max-width:991px){
+
+.story-image{
+
+margin-bottom:40px;
+
+}
+
+.mission-vision .section-title{
+    color:#111;
+    font-size:52px;
+    font-weight:800;
+}
+
+.mission-vision .section-title span{
+    color:#D4AF37;
+}
+
+}
+</style>
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}About | RETROVAULT{% endblock %}
+
+{% block content %}
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="about-hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <span class="hero-tag">
+                    PREMIUM CLASSIC CAR MARKETPLACE
+                </span>
+
+                <h1>
+                    Preserving
+                    <span>Automotive Legends</span>
+                </h1>
+
+                <p>
+
+                    Welcome to <strong>RETROVAULT</strong>, your trusted
+                    destination for timeless classic cars, luxury automobiles,
+                    and rare collector editions. We bring together automotive
+                    heritage and modern elegance.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="{% url 'products' %}" class="btn btn-gold">
+
+                        Explore Cars
+
+                    </a>
+
+                    <a href="{% url 'contact_page' %}"
+                       class="btn btn-outline-light ms-3">
+
+                        Contact Us
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 text-center">
+
+                <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1000&q=80"
+                     class="hero-car img-fluid"
+                     alt="Classic Car">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT INTRO ================= -->
+
+<section class="about-intro">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1000&q=80"
+                     class="about-image img-fluid"
+                     alt="Showroom">
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <span class="section-tag">
+
+                    ABOUT RETROVAULT
+
+                </span>
+
+                <h2>
+
+                    Passion For
+                    <span>Classic Cars</span>
+
+                </h2>
+
+                <p>
+
+                    RETROVAULT is dedicated to preserving automotive
+                    history by offering premium classic cars, vintage
+                    collectibles, and luxury automobiles.
+
+                </p>
+
+                <p>
+
+                    Every vehicle is professionally inspected to ensure
+                    authenticity, outstanding quality, and complete
+                    customer satisfaction.
+
+                </p>
+
+                <div class="row mt-4">
+
+                    <div class="col-4">
+
+                        <div class="counter-box">
+
+                            <h3>250+</h3>
+
+                            <span>Cars</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-4">
+
+                        <div class="counter-box">
+
+                            <h3>18+</h3>
+
+                            <span>Brands</span>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-4">
+
+                        <div class="counter-box">
+
+                            <h3>10K+</h3>
+
+                            <span>Clients</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    
+
+</section>
+<!-- ========================================= -->
+<!-- OUR STORY -->
+<!-- ========================================= -->
+
+<section class="our-story">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <!-- Image -->
+
+            <div class="col-lg-6">
+
+                <img
+                src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?auto=format&fit=crop&w=1200&q=80"
+                class="story-image img-fluid"
+                alt="Classic Car">
+
+            </div>
+
+            <!-- Content -->
+
+            <div class="col-lg-6">
+
+                <span class="section-tag">
+
+                    OUR STORY
+
+                </span>
+
+                <h2 class="section-title">
+
+                    A Journey Driven By
+                    <span>Passion</span>
+
+                </h2>
+
+                <p>
+
+                    RETROVAULT started with a passion for timeless
+                    automobiles and the craftsmanship behind every
+                    classic car.
+
+                </p>
+
+                <p>
+
+                    Today we connect collectors, enthusiasts and
+                    investors with carefully selected vintage,
+                    luxury and collector vehicles from around
+                    the world.
+
+                </p>
+
+                <a href="{% url 'products' %}"
+                   class="btn btn-gold">
+
+                    View Collection
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================= -->
+<!-- MISSION & VISION -->
+<!-- ========================================= -->
+
+<section class="mission-vision">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <span class="section-tag">
+
+                OUR VALUES
+
+            </span>
+
+            <h2 class="section-title">
+
+                Mission &
+                <span>Vision</span>
+
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Mission -->
+
+            <div class="col-lg-6">
+
+                <div class="glass-card">
+
+                    <div class="icon-box">
+
+                        🚘
+
+                    </div>
+
+                    <h3>
+
+                        Our Mission
+
+                    </h3>
+
+                    <p>
+
+                        To preserve automotive heritage by
+                        offering authentic classic cars,
+                        exceptional customer service,
+                        and complete transparency.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- Vision -->
+
+            <div class="col-lg-6">
+
+                <div class="glass-card">
+
+                    <div class="icon-box">
+
+                        🌍
+
+                    </div>
+
+                    <h3>
+
+                        Our Vision
+
+                    </h3>
+
+                    <p>
+
+                        To become the world's most trusted
+                        premium marketplace for vintage,
+                        luxury and collector automobiles.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+{% endblock %}

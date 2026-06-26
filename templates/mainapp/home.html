@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}
+
+{% block title %}
+Home
+{% endblock %}
+
+{% block content %}
+<!-- Carousel -->
+{% include 'mainapp/includes/carousel.html' %}
+
+<!-- Products -->
+ 
+{% include 'products/includes/productsSection.html' %}
+
+{% endblock %}
+
+<!-- Footer --> 
+{% block footer %}
+{% include 'base/includes/footer.html' %}
+{% endblock %}
