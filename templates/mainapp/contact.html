@@ -1,826 +1,761 @@
 <style>
-:root {
-    --fw-black: #0a0a0c;
-    --fw-charcoal: #1a1a24;
-    --fw-graphite: #2a2a35;
-    --fw-silver: #e8e8ed;
-    --fw-platinum: #f0f0f5;
-    --fw-gold: #d4af37;
-    --fw-gold-light: #f5e7c8;
-    --fw-white: #ffffff;
-    --fw-offwhite: #fafafc;
-    --fw-gradient-dark: linear-gradient(165deg, #0b0b12 0%, #1e1e2a 100%);
-    --fw-gradient-light: linear-gradient(165deg, #ffffff 0%, #f5f5fa 100%);
-    --fw-gradient-gold: linear-gradient(135deg, #d4af37 0%, #f5d742 100%);
-    --fw-shadow-sm: 0 20px 40px rgba(0, 0, 0, 0.06);
-    --fw-shadow-md: 0 30px 60px rgba(0, 0, 0, 0.08);
-    --fw-shadow-lg: 0 50px 100px rgba(0, 0, 0, 0.12);
-    --fw-shadow-gold: 0 20px 40px rgba(212, 175, 55, 0.2);
-    --fw-transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    *=========================================
+CONTACT HERO
+=========================================*/
+
+.contact-hero{
+
+    background:#0b0b0b;
+
+    padding:140px 0 100px;
+
+    position:relative;
+
+    overflow:hidden;
+
 }
 
-.fw-contact {
-    font-family: 'Manrope', sans-serif;
-    background: var(--fw-offwhite);
-    color: var(--fw-black);
-    overflow-x: hidden;
-    position: relative;
+.contact-hero::before{
 
-    &::before {
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.02) 0%, transparent 60%);
-        pointer-events: none;
-        z-index: 0;
-    }
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    background:rgba(212,175,55,.08);
+
+    border-radius:50%;
+
+    top:-250px;
+
+    right:-250px;
+
 }
 
-.fw-contact-hero {
-    min-height: 87.7vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--fw-gradient-dark);
-    position: relative;
-    overflow: hidden;
-    isolation: isolate;
+.contact-badge{
 
-    &::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: 
-            radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.2) 0%, transparent 50%),
-            radial-gradient(circle at 90% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 40%);
-        animation: fwPulseGlow 8s ease-in-out infinite;
-        z-index: 1;
-    }
+    display:inline-block;
 
-    &::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: repeating-linear-gradient(45deg, transparent 0px, transparent 25px, rgba(255, 255, 255, 0.02) 25px, rgba(255, 255, 255, 0.02) 50px);
-        z-index: 1;
-    }
+    background:#D4AF37;
+
+    color:#111;
+
+    padding:10px 22px;
+
+    border-radius:40px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
 }
 
-.fw-contact-hero-inner {
-    position: relative;
-    text-align: center;
-    max-width: 900px;
-    padding: 0 30px;
-    z-index: 2;
-    animation: fwFadeInUp 1.2s ease-out;
+.contact-hero h1{
+
+    color:#fff;
+
+    font-size:72px;
+
+    font-weight:800;
+
+    margin:25px 0;
+
+    line-height:1.1;
+
 }
 
-.fw-label {
-    display: inline-block;
-    font-size: 0.8rem;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    background: linear-gradient(135deg, var(--fw-gold-light), var(--fw-gold));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 30px;
-    font-weight: 600;
-    position: relative;
+.contact-hero h1 span{
 
-    &::before, &::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        width: 40px;
-        height: 2px;
-        background: linear-gradient(90deg, transparent, var(--fw-gold), transparent);
-    }
+    color:#D4AF37;
 
-    &::before {
-        left: -60px;
-    }
-
-    &::after {
-        right: -60px;
-    }
 }
 
-.fw-contact-hero-inner h1 {
-    font-family: 'Playfair Display', 'Libre Baskerville', serif;
-    font-size: 4.5rem;
-    font-weight: 800;
-    color: var(--fw-white);
-    margin-bottom: 25px;
-    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    letter-spacing: -1px;
-    line-height: 1.2;
+.contact-hero p{
+
+    color:#d5d5d5;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+    margin-bottom:40px;
+
 }
 
-.fw-contact-hero-inner p {
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.85);
-    line-height: 2;
-    max-width: 650px;
-    margin: 0 auto;
-    font-weight: 300;
-    letter-spacing: 0.3px;
+.hero-btn{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
 }
 
-.fw-contact-wrap {
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 80px 30px;
-    position: relative;
-    z-index: 2;
+.btn-gold{
+
+    background:#D4AF37;
+
+    color:#111;
+
+    padding:15px 38px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.4s;
+
 }
 
-.fw-contact-grid {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: 100px;
-    margin-bottom: 150px;
-    position: relative;
+.btn-gold:hover{
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 2px;
-        height: 80%;
-        background: linear-gradient(180deg, transparent, var(--fw-gold), rgba(212, 175, 55, 0.3), var(--fw-gold), transparent);
-        opacity: 0.3;
-    }
+    background:#fff;
+
+    transform:translateY(-5px);
+
 }
 
-.fw-contact-info {
-    padding: 40px;
-    background: var(--fw-white);
-    border-radius: 40px;
-    box-shadow: var(--fw-shadow-md);
-    position: relative;
-    overflow: hidden;
-    transition: var(--fw-transition);
+.hero-img{
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 4px;
-        height: 0;
-        background: linear-gradient(180deg, var(--fw-gold), #b89b4b);
-        transition: height 0.6s ease;
-    }
+    max-width:100%;
 
-    &::after {
-        content: '✦';
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        font-size: 4rem;
-        color: rgba(212, 175, 55, 0.05);
-        font-family: serif;
-    }
+    border-radius:25px;
 
-    &:hover {
-        transform: translateY(-10px);
-        box-shadow: var(--fw-shadow-lg);
+    box-shadow:0 30px 60px rgba(0,0,0,.45);
 
-        &::before {
-            height: 100%;
-        }
-    }
+    transition:.5s;
 
-    h2 {
-        font-family: 'Playfair Display', serif;
-        font-size: 2.5rem;
-        margin-bottom: 50px;
-        position: relative;
-
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--fw-gold), transparent);
-        }
-    }
 }
 
-.fw-info-item {
-    margin-bottom: 40px;
-    position: relative;
-    padding-left: 30px;
-    transition: var(--fw-transition);
+.hero-img:hover{
 
-    &::before {
-        content: '●';
-        position: absolute;
-        left: 0;
-        top: 0;
-        color: var(--fw-gold);
-        font-size: 1.2rem;
-        opacity: 0.7;
-    }
+    transform:scale(1.04);
 
-    &:hover {
-        transform: translateX(10px);
-
-        &::before {
-            opacity: 1;
-            transform: scale(1.2);
-        }
-    }
-
-    span {
-        font-size: 0.85rem;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        background: linear-gradient(135deg, var(--fw-gold), #b89b4b);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        font-weight: 600;
-    }
-
-    p {
-        font-size: 1.2rem;
-        margin-top: 10px;
-        color: var(--fw-charcoal);
-        font-weight: 500;
-    }
 }
 
-.fw-info-note {
-    margin-top: 60px;
-    padding: 25px;
-    background: rgba(212, 175, 55, 0.05);
-    border-radius: 20px;
-    font-size: 1rem;
-    color: var(--fw-graphite);
-    border: 1px solid rgba(212, 175, 55, 0.1);
-    position: relative;
-    overflow: hidden;
+/*=========================================
+CONTACT INFO
+=========================================*/
 
-    &::before {
-        content: '⏤';
-        position: absolute;
-        top: 5px;
-        left: 10px;
-        font-size: 2rem;
-        color: var(--fw-gold);
-        opacity: 0.3;
-    }
+.contact-info{
+
+    padding:100px 0;
+
+    background:#f7f7f7;
+
 }
 
-.fw-contact-form {
-    padding: 40px;
-    background: var(--fw-white);
-    border-radius: 40px;
-    box-shadow: var(--fw-shadow-md);
-    position: relative;
-    overflow: hidden;
-    transition: var(--fw-transition);
+.section-title span{
 
-    &::before {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 150px;
-        height: 150px;
-        background: radial-gradient(circle, rgba(212, 175, 55, 0.1), transparent);
-        border-radius: 50%;
-        transform: translate(30%, 30%);
-    }
+    color:#D4AF37;
 
-    &:hover {
-        transform: translateY(-10px);
-        box-shadow: var(--fw-shadow-lg);
-    }
+    font-weight:700;
 
-    h2 {
-        font-family: 'Playfair Display', serif;
-        font-size: 2.5rem;
-        margin-bottom: 50px;
-        position: relative;
+    letter-spacing:3px;
 
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--fw-gold), transparent);
-        }
-    }
 }
 
-.fw-field {
-    margin-bottom: 35px;
-    position: relative;
+.section-title h2{
 
-    label {
-        display: block;
-        font-size: 0.8rem;
-        letter-spacing: 2.5px;
-        text-transform: uppercase;
-        margin-bottom: 12px;
-        color: var(--fw-graphite);
-        font-weight: 600;
-        transition: var(--fw-transition);
-    }
+    font-size:48px;
 
-    input, textarea {
-        width: 100%;
-        padding: 18px 22px;
-        border-radius: 20px;
-        border: 2px solid rgba(0, 0, 0, 0.03);
-        background: rgba(0, 0, 0, 0.01);
-        font-family: 'Manrope', sans-serif;
-        font-size: 1rem;
-        outline: none;
-        transition: var(--fw-transition);
-        color: var(--fw-black);
+    font-weight:800;
 
-        &::placeholder {
-            color: rgba(0, 0, 0, 0.2);
-            font-weight: 300;
-            font-style: italic;
-        }
+    margin-top:15px;
 
-        &:focus {
-            border-color: var(--fw-gold);
-            background: var(--fw-white);
-            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.1);
-            transform: translateY(-2px);
-        }
-    }
-
-    textarea {
-        min-height: 160px;
-        resize: none;
-    }
-
-    &:focus-within label {
-        color: var(--fw-gold);
-        transform: translateX(5px);
-    }
 }
 
-.fw-btn {
-    padding: 20px 60px;
-    border-radius: 60px;
-    background: var(--fw-gradient-gold);
-    color: var(--fw-black);
-    border: none;
-    font-size: 0.95rem;
-    letter-spacing: 1.5px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: var(--fw-transition);
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    text-transform: uppercase;
+.contact-card{
 
-    &::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 0;
-        height: 0;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.3);
-        transform: translate(-50%, -50%);
-        transition: width 0.8s ease, height 0.8s ease;
-    }
+    background:#fff;
 
-    &:hover {
-        transform: translateY(-5px) scale(1.02);
-        box-shadow: var(--fw-shadow-gold);
+    padding:45px;
 
-        &::before {
-            width: 400px;
-            height: 400px;
-        }
-    }
+    border-radius:25px;
 
-    &:active {
-        transform: translateY(0) scale(0.98);
-    }
+    text-align:center;
 
-    &:disabled {
-        opacity: 0.7;
-        cursor: not-allowed;
-        transform: none;
-    }
+    transition:.4s;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+
+    height:100%;
+
 }
 
-.fw-contact-signature {
-    text-align: center;
-    padding: 120px 60px;
-    border-radius: 50px;
-    background: var(--fw-gradient-dark);
-    color: var(--fw-white);
-    margin-bottom: 60px;
-    position: relative;
-    overflow: hidden;
-    isolation: isolate;
+.contact-card:hover{
 
-    &::before {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.15), transparent 70%);
-        z-index: 1;
-        animation: fwPulseGlow 4s ease-in-out infinite;
-    }
+    transform:translateY(-10px);
 
-    &::after {
-        content: 'Solevyn';
-        position: absolute;
-        bottom: -30px;
-        right: -30px;
-        font-size: 10rem;
-        font-weight: 800;
-        font-family: 'Playfair Display', serif;
-        color: rgba(255, 255, 255, 0.02);
-        z-index: 1;
-        transform: rotate(-10deg);
-    }
+    box-shadow:0 25px 60px rgba(212,175,55,.20);
 
-    h2 {
-        font-family: 'Playfair Display', serif;
-        font-size: 3.2rem;
-        margin-bottom: 25px;
-        position: relative;
-        z-index: 2;
-        text-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    }
-
-    p {
-        font-size: 1.2rem;
-        line-height: 2;
-        color: rgba(255, 255, 255, 0.85);
-        max-width: 700px;
-        margin: 0 auto;
-        position: relative;
-        z-index: 2;
-        font-weight: 300;
-        letter-spacing: 0.5px;
-    }
 }
 
-.fw-success-message {
-    text-align: center;
-    padding: 40px;
-    background: linear-gradient(135deg, rgba(40, 167, 69, 0.05), rgba(212, 175, 55, 0.05));
-    border-radius: 30px;
-    margin-top: 20px;
-    border: 2px solid var(--fw-gold);
-    animation: fwFadeInUp 0.5s ease-out;
+.contact-card .icon{
 
-    h3 {
-        font-family: 'Playfair Display', serif;
-        font-size: 1.8rem;
-        color: var(--fw-gold);
-        margin-bottom: 15px;
-    }
+    width:90px;
 
-    p {
-        color: var(--fw-graphite);
-        font-size: 1rem;
-    }
+    height:90px;
+
+    margin:auto;
+
+    background:#D4AF37;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
 }
 
-@keyframes fwFadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.contact-card i{
+
+    font-size:38px;
+
+    color:#111;
+
 }
 
-@keyframes fwPulseGlow {
-    0%, 100% {
-        opacity: 0.3;
-    }
-    50% {
-        opacity: 0.8;
-    }
+.contact-card h4{
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
 }
 
-@keyframes fwFloat {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
+.contact-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
 }
 
-@media (max-width: 1200px) {
-    .fw-contact-hero-inner h1 {
-        font-size: 3.8rem;
-    }
+/*=========================================
+RESPONSIVE
+=========================================*/
 
-    .fw-contact-grid {
-        gap: 60px;
-    }
+@media(max-width:991px){
+
+.contact-hero{
+
+text-align:center;
+
 }
 
-@media (max-width: 992px) {
-    .fw-contact-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
+.contact-hero h1{
 
-        &::before {
-            display: none;
-        }
-    }
+font-size:46px;
 
-    .fw-contact-info, .fw-contact-form {
-        padding: 30px;
-
-        h2 {
-            font-size: 2.2rem;
-        }
-    }
-
-    .fw-contact-hero-inner h1 {
-        font-size: 3.2rem;
-    }
-
-    .fw-label::before, .fw-label::after {
-        display: none;
-    }
 }
 
-@media (max-width: 768px) {
-    .fw-contact-wrap {
-        padding: 60px 20px;
-    }
+.hero-btn{
 
-    .fw-contact-hero-inner {
-        h1 {
-            font-size: 2.5rem;
-        }
+justify-content:center;
 
-        p {
-            font-size: 1rem;
-        }
-    }
-
-    .fw-contact-info, .fw-contact-form {
-        h2 {
-            font-size: 2rem;
-        }
-    }
-
-    .fw-info-item {
-        p {
-            font-size: 1.1rem;
-        }
-    }
-
-    .fw-contact-signature {
-        padding: 80px 30px;
-
-        h2 {
-            font-size: 2.5rem;
-        }
-
-        p {
-            font-size: 1rem;
-        }
-    }
-
-    .fw-btn {
-        padding: 18px 40px;
-    }
 }
 
-@media (max-width: 480px) {
-    .fw-contact-hero-inner {
-        h1 {
-            font-size: 2rem;
-        }
-    }
+.hero-img{
 
-    .fw-label {
-        font-size: 0.7rem;
-    }
+margin-top:50px;
 
-    .fw-contact-info, .fw-contact-form {
-        padding: 25px;
+}
 
-        h2 {
-            font-size: 1.8rem;
-            margin-bottom: 35px;
-        }
-    }
+}
+.btn-gold{
+    background:#D4AF37;
+    color:#111;
+    padding:15px 35px;
+    border-radius:50px;
+    font-weight:600;
+    transition:.3s ease;
+}
 
-    .fw-info-item {
-        padding-left: 20px;
+.btn-gold:hover{
+    background:#111;
+    color:#fff;
+}
+.contact-card{
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
 
-        span {
-            font-size: 0.75rem;
-        }
+.contact-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
 
-        p {
-            font-size: 1rem;
-        }
-    }
-
-    .fw-field {
-        input, textarea {
-            padding: 15px 18px;
-            font-size: 0.95rem;
-        }
-    }
-
-    .fw-contact-signature {
-        padding: 60px 20px;
-
-        h2 {
-            font-size: 2rem;
-        }
-    }
+.contact-card i{
+    font-size:45px;
+    color:#D4AF37;
+    margin-bottom:20px;
+}
+section{
+    padding:100px 0;
 }
 </style>
+
 
 {% extends 'base/base.html' %}
 {% load static %}
 
 {% block title %}
-Contact - Solevyn
+Contact | RETROVAULT
 {% endblock %}
 
 {% block content %}
-<section class="fw-contact">
-    <div class="fw-contact-hero">
-        <div class="fw-contact-hero-inner">
-            <span class="fw-label">Solevyn</span>
-            <h1>Get in Touch</h1>
-            <p>We'd love to hear from you. Reach out for support, feedback, or collaboration.</p>
-        </div>
-    </div>
 
-    <div class="fw-contact-wrap">
-        <div class="fw-contact-grid">
-            <div class="fw-contact-info">
-                <h2>Contact Information</h2>
+<!-- =========================
+      CONTACT HERO SECTION
+========================= -->
 
-                <div class="fw-info-item">
-                    <span>Email</span>
-                    <p>support@solevyn.com</p>
+<section class="contact-hero">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <!-- Left Content -->
+
+            <div class="col-lg-6">
+
+                <span class="contact-badge">
+
+                    PREMIUM RETRO TOY STORE
+
+                </span>
+
+                <h1>
+
+                    Let's Build Your
+                    <span>Dream Collection</span>
+
+                </h1>
+
+                <p>
+
+                    Whether you're looking for vintage die-cast cars,
+                    collectible models, or limited-edition toy cars,
+                    our RETROVAULT team is here to help.
+
+                </p>
+
+                <div class="hero-btn">
+
+                    <a href="#contact-form" class="btn btn-gold">
+
+                        Contact Us
+
+                    </a>
+
+                    <a href="{% url 'products' %}" class="btn btn-outline-light">
+
+                        Shop Now
+
+                    </a>
+
                 </div>
 
-                <div class="fw-info-item">
-                    <span>Phone</span>
-                    <p>+91 9345854158</p>
-                </div>
-
-                <div class="fw-info-item">
-                    <span>Location</span>
-                    <p>Bengaluru, India.</p>
-                </div>
-
-                <div class="fw-info-note">
-                    We aim to respond to all inquiries within 24 hours.
-                </div>
             </div>
 
-            <div class="fw-contact-form">
-                <h2>Send a Message</h2>
+            <!-- Right Image -->
 
-                <div id="form-container">
-                    <form id="reach" action="https://formspree.io/f/mblzzgaa" method="POST">
-                        <div class="fw-field">
-                            <label>Name</label>
-                            <input type="text" name="name" placeholder="Your Name" required />
-                        </div>
+            <div class="col-lg-6 text-center">
 
-                        <div class="fw-field">
-                            <label>Email</label>
-                            <input type="email" name="email" placeholder="Your Email" required />
-                        </div>
+                <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&w=1200&q=80"
+                     class="hero-img img-fluid"
+                     alt="Retro Toy Car">
 
-                        <div class="fw-field">
-                            <label>Message</label>
-                            <textarea name="message" id="msg" placeholder="Your Message" required></textarea>
-                        </div>
-
-                        <button type="submit" class="fw-btn" id="submit-btn">Send Message</button>
-                    </form>
-                </div>
             </div>
+
         </div>
 
-        <div class="fw-contact-signature">
-            <h2>Solevyn Support</h2>
-            <p>
-                Designed for clarity. Built for confidence.
-                We're here to support your journey.
-            </p>
-        </div>
     </div>
+
 </section>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('reach');
-    const submitBtn = document.getElementById('submit-btn');
-    const formContainer = document.getElementById('form-container');
 
-    if (form) {
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            
-            // Disable button and show loading state
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
-            
-            // Remove any existing success/error messages
-            const existingMessage = document.querySelector('.fw-success-message');
-            if (existingMessage) {
-                existingMessage.remove();
-            }
+<!-- =========================
+      CONTACT CARDS
+========================= -->
 
-            try {
-                const formData = new FormData(form);
-                const response = await fetch(form.action, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
+<section class="contact-info">
 
-                if (response.ok) {
-                    // Success - show success message
-                    form.reset();
-                    const successMessage = document.createElement('div');
-                    successMessage.className = 'fw-success-message';
-                    successMessage.innerHTML = `
-                        <h3>Thank You! ✦</h3>
-                        <p>Your message has been sent successfully. We'll get back to you within 24 hours.</p>
-                    `;
-                    formContainer.appendChild(successMessage);
-                    
-                    // Re-enable button
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = 'Send Message';
-                } else {
-                    // Error
-                    throw new Error('Form submission failed');
-                }
-            } catch (error) {
-                // Show error message
-                const errorMessage = document.createElement('div');
-                errorMessage.className = 'fw-success-message';
-                errorMessage.style.background = 'linear-gradient(135deg, rgba(220, 53, 69, 0.05), rgba(212, 175, 55, 0.05))';
-                errorMessage.style.borderColor = '#dc3545';
-                errorMessage.innerHTML = `
-                    <h3 style="color: #dc3545;">Oops! Something went wrong</h3>
-                    <p>Please try again later or contact us directly at support@solevyn.com</p>
-                `;
-                formContainer.appendChild(errorMessage);
-                
-                // Re-enable button
-                submitBtn.disabled = false;
-                submitBtn.textContent = 'Send Message';
-            }
-        });
-    }
+    <div class="container">
 
-    // Add real-time validation styling
-    const inputs = document.querySelectorAll('.fw-field input, .fw-field textarea');
-    inputs.forEach(input => {
-        input.addEventListener('focus', function() {
-            this.parentElement.classList.add('focused');
-        });
+        <div class="section-title text-center">
 
-        input.addEventListener('blur', function() {
-            if (!this.value) {
-                this.parentElement.classList.remove('focused');
-            }
-        });
-    });
-});
-</script>
+            <span>GET IN TOUCH</span>
+
+            <h2>We're Always Here To Help</h2>
+
+        </div>
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-lg-4">
+
+                <div class="contact-card">
+
+                    <div class="icon">
+
+                        <i class="bi bi-geo-alt-fill"></i>
+
+                    </div>
+
+                    <h4>Visit Store</h4>
+
+                    <p>
+
+                        Bengaluru<br>
+
+                        Karnataka, India
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="contact-card">
+
+                    <div class="icon">
+
+                        <i class="bi bi-telephone-fill"></i>
+
+                    </div>
+
+                    <h4>Call Us</h4>
+
+                    <p>
+
+                        +91 98765 43210
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="contact-card">
+
+                    <div class="icon">
+
+                        <i class="bi bi-envelope-fill"></i>
+
+                    </div>
+
+                    <h4>Email</h4>
+
+                    <p>
+
+                        support@retrovault.com
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
 {% endblock %}
+/*=========================================
+CONTACT HERO
+=========================================*/
+
+.contact-hero{
+
+    background:#0b0b0b;
+
+    padding:140px 0 100px;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.contact-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+
+    height:650px;
+
+    background:rgba(212,175,55,.08);
+
+    border-radius:50%;
+
+    top:-250px;
+
+    right:-250px;
+
+}
+
+.contact-badge{
+
+    display:inline-block;
+
+    background:#D4AF37;
+
+    color:#111;
+
+    padding:10px 22px;
+
+    border-radius:40px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+.contact-hero h1{
+
+    color:#fff;
+
+    font-size:72px;
+
+    font-weight:800;
+
+    margin:25px 0;
+
+    line-height:1.1;
+
+}
+
+.contact-hero h1 span{
+
+    color:#D4AF37;
+
+}
+
+.contact-hero p{
+
+    color:#d5d5d5;
+
+    line-height:1.9;
+
+    font-size:18px;
+
+    margin-bottom:40px;
+
+}
+
+.hero-btn{
+
+    display:flex;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.btn-gold{
+
+    background:#D4AF37;
+
+    color:#111;
+
+    padding:15px 38px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.4s;
+
+}
+
+.btn-gold:hover{
+
+    background:#fff;
+
+    transform:translateY(-5px);
+
+}
+
+.hero-img{
+
+    max-width:100%;
+
+    border-radius:25px;
+
+    box-shadow:0 30px 60px rgba(0,0,0,.45);
+
+    transition:.5s;
+
+}
+
+.hero-img:hover{
+
+    transform:scale(1.04);
+
+}
+
+/*=========================================
+CONTACT INFO
+=========================================*/
+
+.contact-info{
+
+    padding:100px 0;
+
+    background:#f7f7f7;
+
+}
+
+.section-title span{
+
+    color:#D4AF37;
+
+    font-weight:700;
+
+    letter-spacing:3px;
+
+}
+
+.section-title h2{
+
+    font-size:48px;
+
+    font-weight:800;
+
+    margin-top:15px;
+
+}
+
+.contact-card{
+
+    background:#fff;
+
+    padding:45px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    transition:.4s;
+
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+
+    height:100%;
+
+}
+
+.contact-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 60px rgba(212,175,55,.20);
+
+}
+
+.contact-card .icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    background:#D4AF37;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:25px;
+
+}
+
+.contact-card i{
+
+    font-size:38px;
+
+    color:#111;
+
+}
+
+.contact-card h4{
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+.contact-card p{
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+/*=========================================
+RESPONSIVE
+=========================================*/
+
+@media(max-width:991px){
+
+.contact-hero{
+
+text-align:center;
+
+}
+
+.contact-hero h1{
+
+font-size:46px;
+
+}
+
+.hero-btn{
+
+justify-content:center;
+
+}
+
+.hero-img{
+
+margin-top:50px;
+
+}
+
+}
