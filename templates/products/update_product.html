@@ -1,3 +1,149 @@
+<style>
+    body{
+    background:#f5f6f8;
+    font-family:"Poppins",sans-serif;
+}
+
+.edit-section{
+    min-height:85vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px 20px;
+}
+
+.edit-card{
+    width:100%;
+    max-width:720px;
+    background:#fff;
+    border:1px solid #ececec;
+    border-radius:24px;
+    padding:40px;
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+.edit-card h3{
+    text-align:center;
+    font-size:34px;
+    font-weight:700;
+    color:#111;
+    margin-bottom:35px;
+}
+
+.edit-card label{
+    display:block;
+    margin-bottom:8px;
+    font-size:15px;
+    font-weight:600;
+    color:#444;
+}
+
+.edit-card input,
+.edit-card textarea,
+.edit-card select{
+    width:100%;
+    padding:14px 16px;
+    margin-bottom:20px;
+    border:2px solid #e6e6e6;
+    border-radius:12px;
+    background:#fff;
+    font-size:15px;
+    outline:none;
+    transition:.3s;
+}
+
+.edit-card textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.edit-card input:focus,
+.edit-card textarea:focus,
+.edit-card select:focus{
+    border-color:#D4AF37;
+    box-shadow:0 0 0 4px rgba(212,175,55,.15);
+}
+
+.edit-card input[type="file"]{
+    padding:12px;
+    background:#fafafa;
+    cursor:pointer;
+}
+
+.alert-danger{
+    background:#fdeaea;
+    color:#b42318;
+    border:none;
+    border-radius:12px;
+    padding:14px;
+    margin-bottom:20px;
+}
+
+.adbtn{
+    display:flex;
+    gap:15px;
+    margin-top:15px;
+}
+
+.addbtn,
+.cancelbtn{
+    flex:1;
+    height:52px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    border:none;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.addbtn{
+    background:#111;
+    color:#fff;
+    cursor:pointer;
+}
+
+.addbtn:hover{
+    background:#D4AF37;
+    color:#111;
+    transform:translateY(-2px);
+}
+
+.cancelbtn{
+    background:#dc3545;
+    color:#fff;
+}
+
+.cancelbtn:hover{
+    background:#b02a37;
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+@media(max-width:768px){
+
+.edit-card{
+    padding:28px 22px;
+}
+
+.edit-card h3{
+    font-size:28px;
+}
+
+.adbtn{
+    flex-direction:column;
+}
+
+.addbtn,
+.cancelbtn{
+    width:100%;
+}
+
+}
+</style>
 {% extends 'base/base.html' %}
 
 {% block title %}

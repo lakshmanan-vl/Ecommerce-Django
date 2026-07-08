@@ -1,3 +1,137 @@
-<h1>Payment Failed</h1>
-<p>{{ error }}</p>
-<a href="/">Go Back to Home</a>
+<style>
+    .payment-failed{
+min-height:80vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:60px 20px;
+background:#f8f9fa;
+}
+
+.failed-card{
+width:100%;
+max-width:520px;
+background:#fff;
+padding:45px;
+border-radius:22px;
+text-align:center;
+box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+.failed-icon{
+width:90px;
+height:90px;
+margin:auto;
+border-radius:50%;
+background:#fdeaea;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:50px;
+color:#dc3545;
+margin-bottom:25px;
+}
+
+.failed-card h2{
+font-size:34px;
+font-weight:700;
+color:#111;
+margin-bottom:15px;
+}
+
+.failed-message{
+color:#dc3545;
+font-weight:600;
+margin-bottom:12px;
+}
+
+.failed-text{
+color:#666;
+line-height:1.7;
+margin-bottom:30px;
+}
+
+.failed-buttons{
+display:flex;
+gap:15px;
+}
+
+.retry-btn,
+.home-btn{
+flex:1;
+text-decoration:none;
+padding:14px;
+border-radius:12px;
+font-weight:600;
+transition:.3s;
+text-align:center;
+}
+
+.retry-btn{
+background:#dc3545;
+color:#fff;
+}
+
+.retry-btn:hover{
+background:#bb2d3b;
+color:#fff;
+}
+
+.home-btn{
+background:#111;
+color:#fff;
+}
+
+.home-btn:hover{
+background:#D4AF37;
+color:#111;
+}
+
+@media(max-width:576px){
+.failed-card{
+padding:30px 20px;
+}
+
+.failed-buttons{
+flex-direction:column;
+}
+}
+</style>
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}Payment Failed{% endblock %}
+
+{% block content %}
+
+<section class="payment-failed">
+<div class="failed-card">
+
+<div class="failed-icon">
+<i class="bi bi-x-circle-fill"></i>
+</div>
+
+<h2>Payment Failed</h2>
+
+<p class="failed-message">{{ error }}</p>
+
+<p class="failed-text">
+Your payment could not be completed. Please try again.
+</p>
+
+<div class="failed-buttons">
+
+<a href="javascript:history.back()" class="retry-btn">
+Try Again
+</a>
+
+<a href="{% url 'home_page' %}" class="home-btn">
+Back to Home
+</a>
+
+</div>
+
+</div>
+</section>
+
+{% endblock %}

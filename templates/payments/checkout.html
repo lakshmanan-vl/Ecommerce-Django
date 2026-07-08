@@ -10,101 +10,141 @@
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     
    <style>
-  .checkout-card {
-    max-width: 540px;
-    margin: auto;
-    background-color: #ffffff;
-    color: #1f2937;
-    padding: 20px 40px;
-    border-radius: 20px;
-    border: 1px solid #e6e7eb;
-    box-shadow: 0 18px 40px rgba(17, 24, 39, 0.06);
-    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  }
+  body{
+    background:#f5f6f8;
+    font-family:"Poppins",sans-serif;
+}
 
-  .checkout-card h1 {
-    font-size: 26px;
-    font-weight: 600;
-    color: #0f172a;
-    margin-bottom: 12px;
-  }
+.checkout-card{
+    max-width:650px;
+    margin:50px auto;
+    padding:38px;
+    background:#fff;
+    border-radius:24px;
+    border:1px solid #ececec;
+    box-shadow:0 18px 45px rgba(0,0,0,.08);
+}
 
-  .checkout-card p {
-    font-size: 14px;
-    color: #475569;
-    line-height: 1.7;
-  }
+.checkout-card h1{
+    font-size:34px;
+    font-weight:700;
+    color:#111;
+    margin-bottom:10px;
+}
 
-  .checkout-card h4 {
-    font-size: 15px;
-    font-weight: 600;
-    color: #0f172a;
-    margin-bottom: 14px;
-  }
+.checkout-card p{
+    font-size:15px;
+    color:#666;
+    line-height:1.8;
+}
 
-  .checkout-card .order-details {
-    background-color: #f9fafb;
-    border-radius: 16px;
-    padding: 18px;
-    border: 1px solid #e5e7eb;
-  }
+.checkout-card h4{
+    font-size:18px;
+    font-weight:600;
+    color:#111;
+    margin-bottom:15px;
+}
 
-  .checkout-card .order-details p {
-    margin-bottom: 8px;
-  }
+.order-details{
+    background:#fafafa;
+    border:1px solid #ececec;
+    border-radius:18px;
+    padding:22px;
+    margin-bottom:25px;
+}
 
-  .checkout-card .btn {
-    background-color: #046e60;
-    color: #ffffff;
-    border: none;
-    font-weight: 500;
-    font-size: 14px;
-    border-radius: 14px;
-    padding: 13px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-  }
+.order-details p{
+    margin-bottom:10px;
+}
 
-  .checkout-card .btn:hover {
-    background-color: #07555b;
-    transform: translateY(-1px);
-    box-shadow: 0 8px 18px rgba(15, 23, 42, 0.18);
-  }
+.checkout-card strong{
+    color:#111;
+}
 
-  .checkout-card .cancel-btn {
-    background-color: transparent;
-    color: #0f172a;
-    border: 1px solid #d1d5db;
-  }
+.checkout-card .mb-4{
+    background:#fafafa;
+    border:1px solid #ececec;
+    border-radius:18px;
+    padding:22px;
+}
 
-  .checkout-card .cancel-btn:hover {
-    background-color: #f8fafc;
-    box-shadow: none;
-    transform: none;
-  }
+.checkout-card .btn{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    background:#D4AF37;
+    color:#111;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+}
 
-  .checkout-card hr {
-    border-color: #e5e7eb;
-    margin: 28px 0;
-  }
+.checkout-card .btn:hover{
+    background:#111;
+    color:#fff;
+    transform:translateY(-2px);
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+}
 
-  .checkout-card a {
-    text-decoration: none;
-  }
+.checkout-card .cancel-btn{
+    background:#dc3545;
+    color:#fff;
+}
 
-  .checkout-card form {
-    margin-top: 18px;
-  }
+.checkout-card .cancel-btn:hover{
+    background:#111;
+    color:#fff;
+}
 
-  @media (max-width: 576px) {
-    .checkout-card {
-      padding: 30px 24px;
-      border-radius: 18px;
-    }
+.checkout-card hr{
+    border:0;
+    border-top:1px solid #ececec;
+    margin:30px 0;
+}
 
-    .checkout-card h1 {
-      font-size: 23px;
-    }
-  }
+.checkout-card a{
+    text-decoration:none;
+}
+
+.checkout-card form{
+    margin-top:20px;
+}
+
+.razorpay-payment-button{
+    width:100%!important;
+    padding:15px!important;
+    border:none!important;
+    border-radius:14px!important;
+    background:#111!important;
+    color:#fff!important;
+    font-size:16px!important;
+    font-weight:600!important;
+    transition:.3s!important;
+}
+
+.razorpay-payment-button:hover{
+    background:#D4AF37!important;
+    color:#111!important;
+}
+
+@media(max-width:768px){
+
+.checkout-card{
+    width:94%;
+    padding:28px 22px;
+}
+
+.checkout-card h1{
+    font-size:28px;
+}
+
+.checkout-card h4{
+    font-size:17px;
+}
+
+}
+
 </style>
 
 

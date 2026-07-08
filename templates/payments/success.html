@@ -1,4 +1,127 @@
-{% extends "base/base.html" %}
+
+<style>
+    .payment-success{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:60px 20px;
+background:linear-gradient(135deg,#f8f9fa,#eef2f7);
+}
+
+.payment-success__wrapper{
+width:100%;
+display:flex;
+justify-content:center;
+}
+
+.payment-success__card{
+max-width:550px;
+width:100%;
+background:#fff;
+border-radius:24px;
+padding:50px 40px;
+box-shadow:0 25px 60px rgba(0,0,0,.08);
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+.payment-success__card::before{
+content:"";
+position:absolute;
+top:-120px;
+right:-120px;
+width:240px;
+height:240px;
+background:#D4AF37;
+opacity:.08;
+border-radius:50%;
+}
+
+.payment-success__content{
+position:relative;
+z-index:2;
+}
+
+.payment-success__content::before{
+content:"✓";
+display:flex;
+justify-content:center;
+align-items:center;
+width:90px;
+height:90px;
+margin:0 auto 30px;
+background:#28a745;
+color:#fff;
+font-size:46px;
+font-weight:700;
+border-radius:50%;
+box-shadow:0 12px 30px rgba(40,167,69,.3);
+}
+
+.payment-success__title{
+font-size:36px;
+font-weight:700;
+color:#111;
+margin-bottom:15px;
+}
+
+.payment-success__order-id{
+display:inline-block;
+padding:8px 18px;
+background:#fff8e1;
+color:#8b6b00;
+border-radius:30px;
+font-weight:600;
+margin-bottom:20px;
+}
+
+.payment-success__message{
+font-size:17px;
+color:#666;
+line-height:1.8;
+margin-bottom:35px;
+}
+
+.payment-success__button{
+display:inline-block;
+width:100%;
+padding:16px;
+background:#111;
+color:#fff;
+text-decoration:none;
+border-radius:14px;
+font-size:17px;
+font-weight:600;
+transition:.3s;
+}
+
+.payment-success__button:hover{
+background:#D4AF37;
+color:#111;
+transform:translateY(-3px);
+box-shadow:0 15px 35px rgba(212,175,55,.35);
+}
+
+@media(max-width:768px){
+
+.payment-success__card{
+padding:35px 25px;
+}
+
+.payment-success__title{
+font-size:28px;
+}
+
+.payment-success__content::before{
+width:75px;
+height:75px;
+font-size:36px;
+}
+
+}
+</style>{% extends "base/base.html" %}
 
 {% block header %}
 

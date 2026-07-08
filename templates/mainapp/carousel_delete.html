@@ -1,3 +1,214 @@
+<style>
+    /*=========================
+DELETE PAGE
+==========================*/
+
+.delete-section{
+
+    min-height:100vh;
+
+    background:#f8f9fa;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:100px 0;
+
+}
+
+.delete-card{
+
+    max-width:650px;
+
+    margin:auto;
+
+    background:#fff;
+
+    border-radius:25px;
+
+    padding:50px;
+
+    text-align:center;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+
+}
+
+.warning-icon{
+
+    width:90px;
+
+    height:90px;
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+    border-radius:50%;
+
+    background:#ffe6e6;
+
+    color:#dc3545;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:40px;
+
+}
+
+.delete-card h2{
+
+    font-size:38px;
+
+    font-weight:700;
+
+    color:#111;
+
+    margin-bottom:15px;
+
+}
+
+.delete-card p{
+
+    color:#666;
+
+    font-size:17px;
+
+    line-height:1.8;
+
+}
+
+.delete-card strong{
+
+    color:#D4AF37;
+
+}
+
+.image-preview{
+
+    margin:35px 0;
+
+}
+
+.image-preview img{
+
+    width:100%;
+
+    max-width:450px;
+
+    border-radius:18px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
+
+}
+
+.delete-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+/* Delete Button */
+
+.btn-delete{
+
+    background:#dc3545;
+
+    color:#fff;
+
+    border:none;
+
+    padding:14px 35px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.btn-delete:hover{
+
+    background:#bb2d3b;
+
+    transform:translateY(-4px);
+
+}
+
+/* Cancel Button */
+
+.btn-cancel{
+
+    background:#6c757d;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    padding:14px 35px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    transition:.3s;
+
+}
+
+.btn-cancel:hover{
+
+    background:#495057;
+
+    color:#fff;
+
+    transform:translateY(-4px);
+
+}
+
+@media(max-width:768px){
+
+.delete-card{
+
+padding:35px 25px;
+
+}
+
+.delete-card h2{
+
+font-size:30px;
+
+}
+
+.delete-buttons{
+
+flex-direction:column;
+
+}
+
+.btn-delete,
+
+.btn-cancel{
+
+width:100%;
+
+}
+
+}
+</style>
 {% extends 'base/base.html' %}
 
 {% block title %}
@@ -5,26 +216,64 @@ Delete Carousel Image
 {% endblock %}
 
 {% block content %}
-<section class="carousel-delete">
-    <div class="delete-box">
-        <h4>Confirm Delete</h4>
 
-        <p>
-            Are you sure you want to delete
-            <strong>{{ object.title }}</strong>?
-        </p>
+<section class="delete-section">
 
-        <div class="image-preview">
-            <img src="{{ object.img.url }}" alt="{{ object.title }}">
+    <div class="container">
+
+        <div class="delete-card">
+
+            <div class="warning-icon">
+                <i class="bi bi-trash3-fill"></i>
+            </div>
+
+            <h2>Delete Carousel Image</h2>
+
+            <p>
+
+                Are you sure you want to permanently delete
+
+                <strong>"{{ object.title }}"</strong>?
+
+            </p>
+
+            <div class="image-preview">
+
+                <img src="{{ object.img.url }}"
+                     alt="{{ object.title }}">
+
+            </div>
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <div class="delete-buttons">
+
+                    <button type="submit" class="btn-delete">
+
+                        <i class="bi bi-trash-fill"></i>
+
+                        Delete
+
+                    </button>
+
+                    <a href="{% url 'carousel_list' %}" class="btn-cancel">
+
+                        <i class="bi bi-arrow-left"></i>
+
+                        Cancel
+
+                    </a>
+
+                </div>
+
+            </form>
+
         </div>
 
-        <form method="post">
-            {% csrf_token %}
-            <div class="actions">
-                <button type="submit" class="btn-danger">Yes, Delete</button>
-                <a href="{% url 'carousel_list' %}" class="btn-secondary">Cancel</a>
-            </div>
-        </form>
     </div>
+
 </section>
+
 {% endblock %}

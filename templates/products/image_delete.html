@@ -1,3 +1,156 @@
+<style>
+    body{
+    background:#f5f6f8;
+    font-family:"Poppins",sans-serif;
+}
+
+.delete-section{
+    min-height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px 20px;
+}
+
+.delete-card-image{
+    width:900px;
+    max-width:100%;
+    display:flex;
+    background:#fff;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+.left-panel{
+    width:45%;
+    background:#f8f8f8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:30px;
+}
+
+.left-panel img{
+    width:100%;
+    max-height:420px;
+    object-fit:contain;
+    border-radius:18px;
+    transition:.4s;
+}
+
+.left-panel img:hover{
+    transform:scale(1.05);
+}
+
+.right-panel{
+    width:55%;
+    padding:45px;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.right-panel h3{
+    font-size:34px;
+    font-weight:700;
+    color:#111;
+    margin-bottom:20px;
+}
+
+.warning-text{
+    font-size:16px;
+    color:#555;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.warning-text span{
+    display:block;
+    margin-top:12px;
+    color:#dc3545;
+    font-weight:600;
+}
+
+.btn-group{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.delete-btn,
+.cancel-btn{
+    flex:1;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    text-align:center;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.delete-btn{
+    background:#dc3545;
+    color:#fff;
+}
+
+.delete-btn:hover{
+    background:#b02a37;
+    transform:translateY(-2px);
+}
+
+.cancel-btn{
+    background:#111;
+    color:#fff;
+}
+
+.cancel-btn:hover{
+    background:#D4AF37;
+    color:#111;
+    transform:translateY(-2px);
+}
+
+@media(max-width:768px){
+
+.delete-card-image{
+    flex-direction:column;
+}
+
+.left-panel,
+.right-panel{
+    width:100%;
+}
+
+.left-panel{
+    padding:20px;
+}
+
+.left-panel img{
+    max-height:280px;
+}
+
+.right-panel{
+    padding:30px 22px;
+}
+
+.right-panel h3{
+    font-size:28px;
+}
+
+.btn-group{
+    flex-direction:column;
+}
+
+.delete-btn,
+.cancel-btn{
+    width:100%;
+}
+
+}
+</style>
 {% extends 'base/base.html' %}
 
 {% block title %}

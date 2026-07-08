@@ -1,3 +1,183 @@
+<style>
+    body{
+    background:#f5f6f8;
+    font-family:"Poppins",sans-serif;
+}
+
+.deleteproduct{
+    min-height:85vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px 20px;
+}
+
+.delete-card{
+    width:100%;
+    max-width:650px;
+    background:#fff;
+    border-radius:24px;
+    padding:40px;
+    border:1px solid #ececec;
+    box-shadow:0 20px 50px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.title{
+    font-size:34px;
+    font-weight:700;
+    color:#111;
+    margin-bottom:20px;
+}
+
+.warning-text{
+    font-size:16px;
+    color:#666;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.warning-text strong{
+    color:#dc3545;
+}
+
+.product-img{
+    width:220px;
+    height:220px;
+    object-fit:cover;
+    border-radius:20px;
+    border:2px solid #ececec;
+    margin-bottom:25px;
+    transition:.3s;
+}
+
+.product-img:hover{
+    transform:scale(1.05);
+}
+
+.product-title{
+    font-size:28px;
+    font-weight:700;
+    color:#111;
+    margin-bottom:15px;
+}
+
+.desc{
+    font-size:15px;
+    color:#666;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.rs{
+    font-size:30px;
+    font-weight:700;
+    color:#111;
+    margin-bottom:35px;
+}
+
+.rs span{
+    font-size:16px;
+    font-weight:500;
+    color:#777;
+}
+
+.delete-card input,
+.delete-card textarea,
+.delete-card select{
+    width:100%;
+    padding:14px 16px;
+    margin-bottom:20px;
+    border:2px solid #e6e6e6;
+    border-radius:12px;
+    outline:none;
+    transition:.3s;
+}
+
+.delete-card input:focus,
+.delete-card textarea:focus,
+.delete-card select:focus{
+    border-color:#D4AF37;
+    box-shadow:0 0 0 4px rgba(212,175,55,.15);
+}
+
+.btn-group{
+    display:flex;
+    gap:15px;
+    margin-top:15px;
+}
+
+.delete-btn,
+.cancelbtn{
+    flex:1;
+    height:52px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border:none;
+    border-radius:12px;
+    text-decoration:none;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.delete-btn{
+    background:#dc3545;
+    color:#fff;
+}
+
+.delete-btn:hover{
+    background:#b02a37;
+    color:#fff;
+    transform:translateY(-2px);
+}
+
+.cancelbtn{
+    background:#111;
+    color:#fff;
+}
+
+.cancelbtn:hover{
+    background:#D4AF37;
+    color:#111;
+    transform:translateY(-2px);
+}
+
+@media(max-width:768px){
+
+.delete-card{
+    padding:28px 22px;
+}
+
+.title{
+    font-size:28px;
+}
+
+.product-img{
+    width:180px;
+    height:180px;
+}
+
+.product-title{
+    font-size:24px;
+}
+
+.rs{
+    font-size:24px;
+}
+
+.btn-group{
+    flex-direction:column;
+}
+
+.delete-btn,
+.cancelbtn{
+    width:100%;
+}
+
+}
+</style>
 {% extends 'base/base.html' %}
 
 {% block title %}
