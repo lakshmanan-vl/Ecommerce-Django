@@ -1,79 +1,87 @@
 <style>
-body{
-    background:#f4f5f7;
-    font-family:"Poppins",sans-serif;
+    *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
+body{
+    background:#f5f6fa;
+    font-family:"Poppins",sans-serif;
+}
 .productdetail{
-    max-width:1450px;
     width:95%;
-    margin:40px auto;
+    max-width:1450px;
+    height:86vh;
+    margin:30px auto;
     display:grid;
-    grid-template-columns:55% 45%;
-    gap:25px;
-    align-items:stretch;
+    grid-template-columns:56% 44%;
+    gap:24px;
 }
 
 .product-gallery{
     background:#fff;
     border-radius:22px;
+    padding:18px;
     box-shadow:0 15px 35px rgba(0,0,0,.08);
-    padding:20px;
 }
 
 #carouselExample{
-    width:100%;
-    height:650px;
-    border-radius:18px;
-    overflow:hidden;
-    background:#fff;
+    height:100%;
 }
 
 .carousel-inner,
 .carousel-item{
-    width:100%;
-    height:650px;
+    height:100%;
+}
+
+.carousel-item{
+    display:flex !important;
+    justify-content:center;
+    align-items:center;
 }
 
 .car{
     width:100%;
-    height:100%;
+    height:82%;
     object-fit:contain;
-    display:block;
-    transition:.35s;
 }
 
 .carousel-item:hover .car{
     transform:scale(1.03);
-}
 
-.carousel-control-prev,
-.carousel-control-next{
-    width:45px;
-    height:45px;
-    background:rgba(0,0,0,.55);
-    border-radius:50%;
-    top:50%;
-    transform:translateY(-50%);
-}
-
-.carousel-control-prev{
-    left:18px;
-}
-
-.carousel-control-next{
-    right:18px;
-}
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover{
     background:#111;
+}.carousel-control-prev,
+.carousel-control-next{
+    width:50px;
+    height:50px;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,.55);
+    border-radius:50%;
+}
+
+.carousel-control-prev{
+    left:15px;
+}
+
+.carousel-control-next{
+    right:15px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+    width:18px;
+    height:18px;
 }
 
 .carbtns{
     position:absolute;
-    top:20px;
-    right:20px;
+    top:18px;
+    right:18px;
     display:flex;
     gap:10px;
     z-index:10;
@@ -82,13 +90,14 @@ body{
 .icon{
     width:42px;
     height:42px;
+    border-radius:12px;
     display:flex;
     justify-content:center;
     align-items:center;
-    border-radius:12px;
     text-decoration:none;
-    background:#fff;
+    font-size:18px;
     color:#111;
+    background:#fff;
     box-shadow:0 8px 20px rgba(0,0,0,.12);
     transition:.3s;
 }
@@ -103,6 +112,27 @@ body{
     color:#fff;
 }
 
+.no-image{
+    display:flex !important;
+    justify-content:center;
+    align-items:center;
+}
+
+.no-image-box{
+    text-align:center;
+}
+
+.no-image-box i{
+    font-size:80px;
+    color:#bbb;
+}
+
+.no-image-box p{
+    margin-top:15px;
+    color:#777;
+    font-size:18px;
+    font-weight:600;
+}
 .details{
     background:#fff;
     border-radius:22px;
@@ -111,34 +141,32 @@ body{
     display:flex;
     flex-direction:column;
 }
-
-.product-header{
+..product-header{
     text-align:center;
-}
-
-.thumb{
-    width:100%;
-    max-width:340px;
-    height:240px;
-    object-fit:cover;
-    border-radius:18px;
-    margin:auto;
-    display:block;
+    border-bottom:1px solid #ececec;
+    padding-bottom:25px;
     margin-bottom:25px;
 }
 
+.thumb{
+    width:260px;
+    height:160px;
+    object-fit:cover;
+    border-radius:18px;
+    display:block;
+    margin:auto;
+}
+
 .product-info h2{
-    font-size:38px;
+    font-size:32px;
     font-weight:700;
-    color:#111;
-    margin-bottom:12px;
+    margin:18px 0 10px;
 }
 
 .stock{
     display:inline-block;
-    padding:8px 18px;
-    border-radius:30px;
-    font-size:14px;
+    padding:8px 20px;
+    border-radius:25px;
     font-weight:600;
 }
 
@@ -147,72 +175,75 @@ body{
     color:#198754;
 }
 
-.out-stock{
-    background:#fdeaea;
-    color:#dc3545;
-}
-
 .description-box{
-    margin:30px 0;
+    background:#fafafa;
+    border:1px solid #ececec;
+    border-radius:18px;
+    padding:22px;
+    margin-bottom:22px;
 }
 
 .description-box h4{
-    font-size:20px;
+    font-size:22px;
     font-weight:700;
-    margin-bottom:12px;
+    margin-bottom:10px;
 }
 
 .desc{
     color:#666;
     line-height:1.8;
-    font-size:15px;
 }
 
 .price-box{
     background:#f8f9fa;
-    border:1px solid #ececec;
-    border-radius:16px;
-    padding:22px;
+    border-radius:18px;
+    padding:20px;
+    margin-top:auto;
 }
 
 .price-title{
-    color:#888;
-    font-size:15px;
+    font-size:16px;
+    color:#777;
 }
 
 .rs{
-    font-size:40px;
+    font-size:38px;
     font-weight:700;
     margin-top:8px;
-    color:#111;
 }
-
 .btns{
-    display:flex;
-    gap:15px;
-    margin-top:30px;
+    margin-top:25px;
 }
 
 .product-btn{
-    flex:1;
-    height:50px;
+    width:100%;
+    height:56px;
+    border:none;
+    border-radius:12px;
+    font-size:17px;
+    font-weight:600;
     display:flex;
     justify-content:center;
     align-items:center;
-    border-radius:10px;
-    text-decoration:none;
-    font-size:15px;
-    font-weight:600;
-    transition:.3s;
+}
+
+.add{
+    background:#111;
+    color:#fff;
+}
+
+.add:hover{
+    background:#D4AF37;
+    color:#111;
 }
 
 .edit{
-    background:#0d6efd;
+    background:#198754;
     color:#fff;
 }
 
 .edit:hover{
-    background:#0b5ed7;
+    background:#157347;
     color:#fff;
 }
 
@@ -226,49 +257,63 @@ body{
     color:#fff;
 }
 
-.add{
-    background:#111;
-    color:#fff;
-}
-
-.add:hover{
-    background:#D4AF37;
-    color:#111;
-}
-
 .stock-btn{
     background:#6c757d;
     color:#fff;
+    cursor:not-allowed;
 }
-
 .uploadimage{
-    max-width:1450px;
     width:95%;
-    margin:40px auto;
+    max-width:1450px;
+    margin:35px auto 60px;
 }
 
 .upload{
     background:#fff;
-    padding:35px;
     border-radius:22px;
+    padding:35px;
     box-shadow:0 15px 35px rgba(0,0,0,.08);
 }
 
 .upload h3{
     text-align:center;
-    margin-bottom:30px;
-    font-size:30px;
+    font-size:32px;
     font-weight:700;
+    color:#111;
+    margin-bottom:35px;
+}
+
+.upload form{
+    width:100%;
+}
+
+.upload .mb-3{
+    margin-bottom:22px;
+}
+
+.upload label{
+    display:block;
+    margin-bottom:8px;
+    font-size:15px;
+    font-weight:600;
+    color:#222;
 }
 
 .upload input,
 .upload textarea,
 .upload select{
     width:100%;
-    padding:14px;
+    padding:14px 18px;
     border:2px solid #e5e5e5;
-    border-radius:10px;
-    margin-bottom:20px;
+    border-radius:12px;
+    background:#fff;
+    font-size:15px;
+    transition:.3s;
+}
+
+.upload textarea{
+    min-height:140px;
+    resize:vertical;
 }
 
 .upload input:focus,
@@ -276,19 +321,58 @@ body{
 .upload select:focus{
     outline:none;
     border-color:#D4AF37;
+    box-shadow:0 0 0 4px rgba(212,175,55,.15);
+}
+
+.upload input[type=file]{
+    background:#fafafa;
+    cursor:pointer;
+    padding:10px;
+}
+
+.upload input[type=file]::file-selector-button{
+    background:#111;
+    color:#fff;
+    border:none;
+    padding:10px 18px;
+    border-radius:8px;
+    margin-right:15px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.upload input[type=file]::file-selector-button:hover{
+    background:#D4AF37;
+    color:#111;
+}
+
+.alert-danger{
+    border:none;
+    border-radius:12px;
+    margin-bottom:20px;
+}
+
+.text-danger{
+    font-size:14px;
+    margin-top:6px;
 }
 
 .upload-btn{
-    text-align:center;
+    display:flex;
+    justify-content:center;
+    margin-top:30px;
 }
 
 .upload-btn .btn{
-    width:220px;
-    height:50px;
+    width:240px;
+    height:52px;
     border:none;
-    border-radius:10px;
+    border-radius:12px;
     background:#111;
     color:#fff;
+    font-size:16px;
+    font-weight:600;
+    transition:.3s;
 }
 
 .upload-btn .btn:hover{
@@ -296,23 +380,47 @@ body{
     color:#111;
 }
 
-@media(max-width:992px){
+.upload-btn .btn i{
+    margin-right:8px;
+}
+@media (max-width:1200px){
 
 .productdetail{
+    width:96%;
+    height:auto;
     grid-template-columns:1fr;
+    gap:25px;
 }
 
-#carouselExample,
+.product-gallery,
+.details{
+    height:auto;
+}
+
+#carouselExample{
+    height:550px;
+}
+
+.carousel-inner,
 .carousel-item{
-    height:420px;
+    height:550px;
 }
 
 .details{
-    margin-top:20px;
+    padding:30px;
 }
 
 .thumb{
-    height:200px;
+    width:220px;
+    height:160px;
+}
+
+.product-info h2{
+    font-size:34px;
+}
+
+.description-box{
+    flex:none;
 }
 
 .btns{
@@ -323,37 +431,236 @@ body{
     width:100%;
 }
 
+.upload{
+    padding:30px;
+}
+
+}
+
+@media (max-width:992px){
+
+.productdetail{
+    width:96%;
+    margin:20px auto;
+}
+
+#carouselExample{
+    height:450px;
+}
+
+.carousel-inner,
+.carousel-item{
+    height:450px;
+}
+
+.product-header{
+    flex-direction:column;
+    text-align:center;
+}
+
+.thumb{
+    width:200px;
+    height:140px;
+}
+
+.product-info h2{
+    font-size:30px;
+}
+
+.description-box h4{
+    font-size:20px;
+}
+
+.desc{
+    font-size:15px;
+}
+
+.rs{
+    font-size:34px;
+}
+
+.upload h3{
+    font-size:28px;
+}
+
 .upload-btn .btn{
     width:100%;
 }
 
 }
 
-@media(max-width:576px){
+@media (max-width:768px){
 
 .productdetail{
-    width:96%;
+    width:97%;
 }
 
-#carouselExample,
+.product-gallery{
+    padding:12px;
+}
+
+#carouselExample{
+    height:350px;
+}
+
+.carousel-inner,
 .carousel-item{
-    height:300px;
+    height:350px;
+}
+
+.thumb{
+    width:170px;
+    height:120px;
 }
 
 .product-info h2{
-    font-size:28px;
+    font-size:26px;
+}
+
+.stock{
+    font-size:13px;
+}
+
+.description-box{
+    padding:18px;
+}
+
+.price-box{
+    padding:20px;
 }
 
 .rs{
     font-size:30px;
 }
 
-.thumb{
-    height:170px;
+.product-btn{
+    height:48px;
+    font-size:15px;
 }
 
 .upload{
-    padding:20px;
+    padding:25px;
+}
+
+.upload h3{
+    font-size:24px;
+}
+
+.upload input,
+.upload textarea,
+.upload select{
+    padding:12px;
+}
+
+}
+
+@media (max-width:576px){
+
+.productdetail{
+    width:98%;
+    gap:18px;
+}
+
+.product-gallery{
+    padding:10px;
+}
+
+#carouselExample{
+    height:270px;
+}
+
+.carousel-inner,
+.carousel-item{
+    height:270px;
+}
+
+.car{
+    object-fit:contain;
+}
+
+.thumb{
+    width:140px;
+    height:100px;
+}
+
+.product-info h2{
+    font-size:22px;
+}
+
+.stock{
+    font-size:12px;
+    padding:6px 14px;
+}
+
+.description-box{
+    margin:15px 0;
+    padding:15px;
+}
+
+.description-box h4{
+    font-size:18px;
+}
+
+.desc{
+    font-size:13px;
+    line-height:1.7;
+}
+
+.price-box{
+    padding:18px;
+}
+
+.rs{
+    font-size:26px;
+}
+
+.product-btn{
+    height:46px;
+    font-size:14px;
+}
+
+.upload{
+    padding:18px;
+}
+
+.upload h3{
+    font-size:22px;
+}
+
+.upload-btn .btn{
+    width:100%;
+    height:48px;
+}
+
+}
+
+@media (max-width:400px){
+
+#carouselExample{
+    height:220px;
+}
+
+.carousel-inner,
+.carousel-item{
+    height:220px;
+}
+
+.thumb{
+    width:120px;
+    height:90px;
+}
+
+.product-info h2{
+    font-size:20px;
+}
+
+.rs{
+    font-size:22px;
+}
+
+.product-btn{
+    height:44px;
+    font-size:13px;
 }
 
 }
@@ -389,7 +696,7 @@ Product Details
 
             <img src="{{ product.thumbnail.url }}"
                  class="thumb"
-                alt="{{ product.title }}">
+                 alt="{{ product.title }}">
 
             <div class="product-info">
 
@@ -436,28 +743,29 @@ Product Details
             {% if user.is_staff %}
 
             <a href="{% url 'edit_product' product.pk %}"
-               class="product-btn edit">
-                <!-- <i class="bi bi-pencil-square"></i> -->
-                Edit 
+               class="btn edit">
+                <i class="bi bi-pencil-square"></i>
+                Edit Product
             </a>
 
             <a href="{% url 'delete_product' product.pk %}"
-               class="product-btn delete">
-                <!-- <i class="bi bi-trash"></i> -->
-                Delete</a>
+               class="btn delete">
+                <i class="bi bi-trash"></i>
+                Delete Product
+            </a>
 
             {% else %}
 
                 {% if product.stock > 0 %}
 
-                <button class="product-btn add add-to-cart">
-                    <!-- <i class="bi bi-cart-plus"></i> -->
+                <button class="btn add add-to-cart">
+                    <i class="bi bi-cart-plus"></i>
                     Add to Cart
                 </button>
 
                 {% else %}
 
-                <button class="product-btn stock-btn" disabled>
+                <button class="btn stock-btn" disabled>
                     Out of Stock
                 </button>
 
